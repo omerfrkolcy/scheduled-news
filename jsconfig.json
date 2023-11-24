@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"]
+    },
+    "allowJs": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "**/*.js",
+    "**/*.jsx",
+    ".next/types/**/*.js",
+    "pages/api/cron/[cron].js",
+    "pages/api/data/[interval].js",
+    "pages/_app.jsx",
+    "pages/_document.jsx",
+    "pages/index.jsx"
+  ],
+  "exclude": ["node_modules"]
+}
