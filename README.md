@@ -1,4 +1,4 @@
-# Cron Job Project
+# Scheduled News
 
 This project is a template for setting up cron jobs in a Node.js environment. It uses Next.js, pnpm, and Vercel for development and deployment.
 
@@ -9,7 +9,6 @@ This project is a template for setting up cron jobs in a Node.js environment. It
 - pnpm: Fast, disk space efficient package manager.
 - Vercel: Deployment and hosting platform.
 - Upstash: A serverless database for Redis.
-
 
 ## What It Does
 
