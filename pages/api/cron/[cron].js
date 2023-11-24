@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
-import { HACKERNEWS_API } from '../../enums';
 
 export const config = { runtime: 'edge' };
 
@@ -17,7 +16,9 @@ export default async function handler(req) {
 }
 
 async function update(interval) {
-  const newStories = await fetch(`${HACKERNEWS_API}/newstories.json?print=pretty`).then((res) => res.json());
+  const newStories = await fetch(`${process.env.HACKERNEWS_API}/newstories.json?print=pretty`).then((res) =>
+    res.json()
+  );
 
   return await kv.set(interval, { fetchedAt: Date.now(), id: newStories[0] });
 }

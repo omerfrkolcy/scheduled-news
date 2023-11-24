@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
-import { HACKERNEWS_API } from 'pages/enums';
 
 export const config = {
   runtime: 'edge',
@@ -14,7 +13,7 @@ export default async function handler(req) {
   }
 
   const { id, fetchedAt } = (await kv.get(interval)) || {};
-  const res = await fetch(`${HACKERNEWS_API}/item/${id}.json?print=pretty`).then((res) => res.json());
+  const res = await fetch(`${process.env.HACKERNEWS_API}/item/${id}.json?print=pretty`).then((res) => res.json());
 
   return new NextResponse(JSON.stringify({ fetchedAt, ...res }), { status: 200 });
 }
