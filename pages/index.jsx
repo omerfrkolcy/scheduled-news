@@ -1,4 +1,4 @@
-import { Text, Code, Page } from '@vercel/examples-ui';
+import { Text, Page } from '@vercel/examples-ui';
 import Post from '@/components/post';
 
 const intervals = [
@@ -31,7 +31,7 @@ export default function Main({ data }) {
         <Text variant='h2'>welcome.</Text>
         <Text>
           This is a Next.js app that uses HackerNews APIs to update data at different intervals. You can check the
-          cached posts from below list
+          cached posts from below list.
         </Text>
       </section>
       <section className='grid gap-6 mt-10 pt-10 border-t border-gray-300'>
