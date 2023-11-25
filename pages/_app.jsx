@@ -4,8 +4,7 @@ import { NextUIProvider } from '@nextui-org/system';
 import { useRouter } from 'next/router';
 import NavBar from '@/components/navbar';
 import { Analytics } from '@vercel/analytics/react';
-
-import '@vercel/examples-ui/globals.css';
+import './globals.css';
 
 function App({ Component, pageProps }) {
   const router = useRouter();

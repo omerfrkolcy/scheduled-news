@@ -20,14 +20,16 @@ export default function Post({ interval }) {
     <div className='flex justify-between items-center border border-gray-100 shadow-md rounded-lg p-5'>
       <div className='grid gap-2'>
         <a href={`https://news.ycombinator.com/item?id=${id}`} target='_blank' rel='noreferrer noopener'>
-          <h3 className='text-gray-600 hover:text-black font-semibold transition-all'>{title}</h3>
+          <h3 className='text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200 font-semibold transition-all'>
+            {title}
+          </h3>
         </a>
         <div className='flex space-x-1 text-gray-500 text-sm'>
           <a
             href={`https://news.ycombinator.com/item?id=${id}`}
             target='_blank'
             rel='noreferrer noopener'
-            className='hover:underline hover:text-gray-800 transition-all'
+            className='hover:underline hover:text-gray-800 dark:hover:text-gray-200 transition-all'
           >
             {score} {score === 1 ? 'point' : 'points'}
           </a>
@@ -36,7 +38,7 @@ export default function Post({ interval }) {
             href={`https://news.ycombinator.com/user?id=${by}/`}
             target='_blank'
             rel='noreferrer noopener'
-            className='hover:underline hover:text-gray-800 transition-all'
+            className='hover:underline hover:text-gray-800 dark:hover:text-gray-200 transition-all'
           >
             {by}
           </a>
@@ -46,7 +48,7 @@ export default function Post({ interval }) {
             href={`https://news.ycombinator.com/item?id=${id}`}
             target='_blank'
             rel='noreferrer noopener'
-            className='hover:underline hover:text-gray-800 transition-all'
+            className='hover:underline hover:text-gray-800 dark:hover:text-gray-200 transition-all'
           >
             {descendants} {descendants === 1 ? 'comment' : 'comments'}
           </a>
