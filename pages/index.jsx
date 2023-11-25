@@ -26,7 +26,7 @@ const intervals = [
 
 export default function Main() {
   return (
-    <Page className='flex justify-center min-w-full py-16'>
+    <Page className='flex justify-center min-w-full py-16 px-4'>
       <div className='flex flex-col justify-center max-w-3xl'>
         <section className='flex flex-col gap-6'>
           <Text variant='h2'>welcome.</Text>
